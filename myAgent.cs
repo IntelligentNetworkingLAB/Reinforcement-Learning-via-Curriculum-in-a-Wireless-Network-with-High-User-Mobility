@@ -50,10 +50,10 @@ public class myAgent : Agent
         BS[0].y = 125.0f;
         BS[1].x = 375.0f;
         BS[1].y = 125.0f;
-        BS[2].x = 375.0f;
-        BS[2].y = 125.0f;
-        BS[3].x = 375.0f;
-        BS[3].y = 375.0f;
+        //BS[2].x = 375.0f;
+        //BS[2].y = 125.0f;
+        //BS[3].x = 375.0f;
+        //BS[3].y = 375.0f;
 
         for (int i = 0; i < NUM_BS; ++i)
         {
@@ -106,7 +106,7 @@ public class myAgent : Agent
         user_move_go();
 
         //Aciton
-        for (int i = 0; i < NUM_user; ++i) // À¯Àú-±âÁö±¹ ¾î¼Ò½Ã¿¡ÀÌ¼Ç
+        for (int i = 0; i < NUM_user; ++i) // ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò½Ã¿ï¿½ï¿½Ì¼ï¿½
             Usr_Assoc[i] = actionBuffers.DiscreteActions[i];
 
         for (int i = NUM_user; i < NUM_RBs; ++i)
@@ -114,10 +114,10 @@ public class myAgent : Agent
             alloc_RBs[i] = actionBuffers.DiscreteActions[i];
         }
         //UnityEngine.Debug.Log(step.ToString());
-        for (int i = 0; i < NUM_user; i++) //Ã¤³Î°ÔÀÎ ´Ù½Ã ¾ò±â
+        for (int i = 0; i < NUM_user; i++) //Ã¤ï¿½Î°ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½
             get_channel_gain(i);
 
-        get_rate();// ´Ù½Ã µ¥ÀÌÅÍ ·¹ÀÌÆ® ¾ò±â
+        get_rate();// ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½
         /*for(int i =0; i<20; i++)
         {
             UnityEngine.Debug.Log(i.ToString() + "'s Rate: " + eachUsr_Rate[i].ToString());
@@ -209,7 +209,7 @@ public class myAgent : Agent
     {
         float velo_mean = lev;
 
-        //TODO->³­ÀÌµµ
+        //TODO->ï¿½ï¿½ï¿½Ìµï¿½
         float angle_mean = 0.0f;
         for (int j = 0; j < NUM_user; j++)
         {
