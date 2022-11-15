@@ -50,7 +50,7 @@ public class myAgent : Agent
         BS[0].y = 125.0f;
         BS[1].x = 375.0f;
         BS[1].y = 125.0f;
-        //BS[2].x = 375.0f;
+        BS[2].x = 375.0f;
         //BS[2].y = 125.0f;
         //BS[3].x = 375.0f;
         //BS[3].y = 375.0f;
