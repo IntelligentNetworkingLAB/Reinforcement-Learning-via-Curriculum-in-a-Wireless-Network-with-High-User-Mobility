@@ -53,7 +53,7 @@ public class myAgent : Agent
         BS[2].x = 375.0f;
         BS[2].y = 125.0f;
         BS[3].x = 375.0f;
-        //BS[3].y = 375.0f;
+        BS[3].y = 375.0f;
 
         for (int i = 0; i < NUM_BS; ++i)
         {
