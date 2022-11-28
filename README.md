@@ -7,6 +7,11 @@ With the rapid development of wireless networks and artificial intelligence tech
 ![image info](./systemmodel.png)
 ![image info](./curr.png)
 
+## Version Info
+- Unity 2021
+- ML-Agents 2.0(Unity Package)
+- ML-Agents 0.26.0(Unity Package)
+
 ## License
 Copyright (c) 2022 Networking Intelligence
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
