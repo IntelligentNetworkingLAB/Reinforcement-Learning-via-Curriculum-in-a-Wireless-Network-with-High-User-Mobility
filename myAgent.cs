@@ -209,7 +209,6 @@ public class myAgent : Agent
     {
         float velo_mean = lev;
 
-        //TODO->���̵�
         float angle_mean = 0.0f;
         for (int j = 0; j < NUM_user; j++)
         {
@@ -258,51 +257,10 @@ public class myAgent : Agent
 
     public void get_channel_gain(int idx)
     {
-        float eta = 0.7f; // path loss exponent
-        int my_bs = Usr_Assoc[idx]; // BS
-        float dist;
-        float g;
-        for (int i = 0; i < 4; ++i)
-        {
-            dist = Vector2.Distance(new Vector2(Users[idx].x, Users[idx].y), new Vector3(BS[i].x, BS[i].y));
-            g = 10.0f / Mathf.Pow(dist, eta);
-            //UnityEngine.Debug.Log(my_bs.ToString() + "    " + idx.ToString());
-            Ch_Gain_OBS[i, idx] = g;
-            if (my_bs == i)
-                Ch_Gain[idx] = g;
-        }
-
     }
 
 
     public void get_rate()
     {
-        float rate = 0;
-        int num_RBs;
-        for (int i = 0; i < NUM_user; ++i)
-        {
-            num_RBs = 1;
-            for (int j = 0; j < NUM_RBs; ++j)
-            {
-                if (alloc_RBs[j] == i)
-                    num_RBs = num_RBs + 1;
-            }
-            int BW = 180000 * num_RBs;
-            //float n_dbm = -174 + 10 * Mathf.Log10(BW);
-            //float n_linear = Mathf.Pow(10, -3) * (Mathf.Pow(10, (n_dbm / 10)));
-            float pt = 4.0f / 10;
-            //Debug.Log("gain from array: " + Ch_Gain[step, i]);
-
-            float snr = (pt * Ch_Gain[i]) / 174f;
-            //float snr = pt * Ch_Gain[this.StepCount, i] / n_linear;
-
-            eachUsr_Rate[i] = BW * Mathf.Log(1 + snr);
-            //UnityEngine.Debug.Log(eachUsr_Rate[19].ToString());
-
-            rate = rate + eachUsr_Rate[i];
-
-            //Debug.Log("rate" + i.ToString() + ":" + rate.ToString());
-        }
-        Usr_Rate = rate;
     }
 }
